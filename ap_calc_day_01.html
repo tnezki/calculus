@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Calculus AB - Day 1</title>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        @media print {
+            .page-break { page-break-before: always; }
+            body { margin: 0; }
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .page {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto 20px;
+            padding: 0.75in;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        
+        .title-page {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 9.5in;
+        }
+        
+        .main-title {
+            font-size: 48px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .teacher-name {
+            font-size: 24px;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+        
+        .quote {
+            font-size: 18px;
+            font-style: italic;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        h2 {
+            color: #34495e;
+            font-size: 22px;
+            margin-top: 25px;
+        }
+        
+        h3 {
+            color: #2980b9;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d1ecf1 100%);
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .investigation-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .reminder-box {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border: 2px solid #dc3545;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        ul {
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .math-example {
+            background: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        
+        .timer {
+            background: #343a40;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Welcome -->
+    <div class="page title-page">
+        <div class="main-title">Welcome to<br>AP Calculus AB</div>
+        <div class="teacher-name">Teacher: Mr. Nezki</div>
+        <div class="quote">
+            "Calculus is the most powerful weapon of thought yet devised by the wit of man."
+            <br><br>
+            <strong>— W.B. Smith</strong>
+            <br><br>
+            Get ready to unlock the mathematics that describes our changing world—from the motion of planets to the growth of populations, from the optimization of profits to the flow of fluids. This year, you'll develop the tools to analyze change and accumulation in ways that have revolutionized science, engineering, and economics.
+        </div>
+    </div>
+
+    <!-- Page 2: What is Calculus? -->
+    <div class="page page-break">
+        <h1>What is Calculus?</h1>
+        
+        <h2>A Brief History</h2>
+        <p>Calculus was independently developed in the late 17th century by Sir Isaac Newton and Gottfried Wilhelm Leibniz. Newton needed it to describe planetary motion and physics, while Leibniz developed it to solve optimization problems. Their work built upon earlier contributions from mathematicians like Fermat, Descartes, and others who worked on tangent lines and areas under curves.</p>
+        
+        <h2>The Two Main Branches</h2>
+        
+        <h3>Derivatives (Differential Calculus)</h3>
+        <p>Derivatives measure <strong>instantaneous rates of change</strong>. Think of it as finding the exact speed of a car at a specific moment, or the steepness of a curve at a particular point.</p>
+        <div class="math-example">
+            The derivative of $f(x) = x^2$ is $f'(x) = 2x$
+            <br>This tells us the slope of the parabola at any point $x$.
+        </div>
+        
+        <h3>Integrals (Integral Calculus)</h3>
+        <p>Integrals measure <strong>accumulation</strong>. They help us find areas under curves, total distances traveled, or the total amount of something that's changing over time.</p>
+        <div class="math-example">
+            $\int_0^2 x^2 \, dx = \frac{8}{3}$
+            <br>This gives us the area under the curve $y = x^2$ from $x = 0$ to $x = 2$.
+        </div>
+        
+        <h2>Real-World Applications</h2>
+        <ul>
+            <li><strong>Physics:</strong> Describing motion, forces, and energy</li>
+            <li><strong>Engineering:</strong> Optimizing designs and analyzing systems</li>
+            <li><strong>Economics:</strong> Marginal cost, profit maximization</li>
+            <li><strong>Medicine:</strong> Drug dosage calculations, population models</li>
+            <li><strong>Technology:</strong> Machine learning algorithms, computer graphics</li>
+        </ul>
+        
+        <h2>The Purpose of Learning Calculus</h2>
+        <p>Calculus teaches you to think about <em>change</em> and <em>accumulation</em> in precise, mathematical ways. It's the foundation for advanced mathematics, science, and engineering. More importantly, it develops your problem-solving skills and mathematical reasoning.</p>
+    </div>
+
+    <!-- Page 3: What is an AP Class? -->
+    <div class="page page-break">
+        <h1>What is an AP Class?</h1>
+        
+        <div class="highlight-box">
+            <h2>Advanced Placement (AP) Program</h2>
+            <p>AP courses are college-level classes taught in high school. They're designed to give you the opportunity to earn college credit and demonstrate your readiness for college-level work.</p>
+        </div>
+        
+        <h2>The AP Calculus AB Exam</h2>
+        <ul>
+            <li><strong>When:</strong> Early May (exact date TBD)</li>
+            <li><strong>Format:</strong> Multiple choice + Free response questions</li>
+            <li><strong>Duration:</strong> 3 hours and 15 minutes</li>
+            <li><strong>Scoring:</strong> 1-5 scale (3+ typically considered passing)</li>
+        </ul>
+        
+        <h2>Your Choice: To Take the Exam or Not</h2>
+        
+        <h3>Taking the Exam</h3>
+        <ul>
+            <li>Potential college credit (saves time and money)</li>
+            <li>Demonstrates academic rigor to colleges</li>
+            <li>Personal achievement and confidence boost</li>
+            <li>Validates your learning with a standardized assessment</li>
+        </ul>
+        
+        <h3>Not Taking the Exam</h3>
+        <ul>
+            <li>Still get the rigorous course experience</li>
+            <li>Less pressure, more focus on learning</li>
+            <li>Some students prefer to take calculus in college</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <h3>Benefits Even If You Retake Calculus in College</h3>
+            <p>Many students find that taking AP Calculus AB—even if they retake calculus in college—gives them a significant advantage:</p>
+            <ul>
+                <li><strong>Stronger foundation:</strong> You'll understand concepts more deeply the second time</li>
+                <li><strong>Better grades:</strong> College calculus will feel more manageable</li>
+                <li><strong>More time:</strong> You can focus on other challenging courses</li>
+                <li><strong>Confidence:</strong> You'll enter college with advanced math experience</li>
+            </ul>
+            <p><em>Think of it as calculus with training wheels before the real thing!</em></p>
+        </div>
+        
+        <h2>Our Approach This Year</h2>
+        <p>We'll focus on deep understanding over memorization, real-world applications, and building problem-solving skills that will serve you in any field you choose.</p>
+    </div>
+
+    <!-- Page 4: Syllabus Reminder -->
+    <div class="page page-break">
+        <div class="reminder-box">
+            <h1>📋 REMINDER FOR MR. NEZKI</h1>
+            <h2>Items to Cover Today:</h2>
+            
+            <div style="text-align: left; margin-top: 30px;">
+                <h3>✓ SYLLABUS REVIEW</h3>
+                <ul>
+                    <li>Course objectives and learning targets</li>
+                    <li>Major topics and timeline</li>
+                    <li>Textbook and required materials</li>
+                    <li>Class policies and procedures</li>
+                    <li>AP Exam preparation schedule</li>
+                </ul>
+                
+                <h3>✓ GRADING EXPECTATIONS</h3>
+                <ul>
+                    <li>Retake/revision opportunities</li>
+                    <li>Extra credit policies</li>
+                    <li>Progress monitoring and parent communication</li>
+                </ul>
+                
+                <h3>✓ ADDITIONAL ITEMS</h3>
+                <ul>
+                    <li>Crewtime</li>
+                    <li>Technology requirements (graphing calculator, Desmos)</li>
+                    <li>Study groups and peer collaboration expectations</li>
+                    <li>Resources for additional support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Derivatives Investigation Setup -->
+    <div class="page page-break">
+        <h1>Partner Investigation: Exploring Derivatives</h1>
+        <div class="timer">⏱️ 25 minutes total</div>
+        
+        <div class="highlight-box">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this investigation, you will be able to:</p>
+            <ul>
+                <li>Describe what a derivative represents in real-world terms</li>
+                <li>Connect derivatives to familiar concepts like speed and slope</li>
+                <li>Identify situations where derivatives are useful</li>
+            </ul>
+        </div>
+        
+        <h2>Materials Needed</h2>
+        <ul>
+            <li>Graphing calculator or access to Desmos (desmos.com/calculator)</li>
+            <li>Investigation handout (provided)</li>
+            <li>Partner to work with</li>
+        </ul>
+        
+        <h2>Investigation Overview</h2>
+        <p>You and your partner will explore three different scenarios where the idea of "rate of change" is important. Don't worry about formal definitions or complicated formulas—focus on understanding the <em>concepts</em> and <em>applications</em>.</p>
+        
+        <div class="investigation-box">
+            <h3>Scenario 1: The Speeding Car <span class="timer">8 minutes</span></h3>
+            <p><strong>The Situation:</strong> A car's position is given by $s(t) = t^2 + 2t$ meters after $t$ seconds.</p>
+            
+            <p><strong>Your Task:</strong></p>
+            <ol>
+                <li>Create a table showing the car's position at $t = 0, 1, 2, 3, 4, 5$ seconds</li>
+                <li>Calculate the average speed between consecutive time intervals</li>
+                <li>Graph the position function using Desmos or your calculator</li>
+                <li>Discuss: What do you notice about how the speed is changing?</li>
+            </ol>
+            
+            <p><strong>Think About:</strong> If you were in this car, how would you describe the motion to someone? Is the car speeding up or slowing down?</p>
+        </div>
+    </div>
+
+    <!-- Page 6: Investigation Continued -->
+    <div class="page page-break">
+        <div class="investigation-box">
+            <h3>Scenario 2: The Growing Population <span class="timer">8 minutes</span></h3>
+            <p><strong>The Situation:</strong> A bacteria culture grows according to $P(t) = 100e^{0.5t}$ where $P$ is the population after $t$ hours.</p>
+            
+            <p><strong>Your Task:</strong></p>
+            <ol>
+                <li>Use Desmos to graph this function for $t$ from 0 to 6 hours</li>
+                <li>Find the population at $t = 0, 1, 2, 3$ hours</li>
+                <li>Calculate the average rate of population growth between each hour</li>
+                <li>Discuss: When is the population growing fastest? Slowest?</li>
+            </ol>
+            
+            <p><strong>Think About:</strong> If you were a scientist studying this bacteria, what information would be most important to know about its growth rate?</p>
+        </div>
+        
+        <div class="investigation-box">
+            <h3>Scenario 3: The Profit Function <span class="timer">8 minutes</span></h3>
+            <p><strong>The Situation:</strong> A company's profit from selling $x$ items is $P(x) = -x^2 + 40x - 300$ dollars.</p>
+            
+            <p><strong>Your Task:</strong></p>
+            <ol>
+                <li>Graph this function using Desmos (try $x$ from 0 to 50)</li>
+                <li>Find the profit when selling 10, 20, 30, and 40 items</li>
+                <li>Identify where profit is increasing vs. decreasing</li>
+                <li>Estimate where profit appears to be maximized</li>
+            </ol>
+            
+            <p><strong>Think About:</strong> If you were the company owner, what would you want to know about how profit changes as you sell more items?</p>
+        </div>
+        
+        <h2>Reflection Questions <span class="timer">1 minute</span></h2>
+        <p>Jot down quick thoughts on these questions—we'll discuss them as a class:</p>
+        <ol>
+            <li>What do all three scenarios have in common?</li>
+            <li>Why might it be important to know how quickly something is changing?</li>
+            <li>Can you think of other real-world situations where rate of change matters?</li>
+        </ol>
+    </div>
+
+    <!-- Page 7: Investigation Sharing and Wrap-up -->
+    <div class="page page-break">
+        <h1>Investigation Debrief & Key Insights</h1>
+        
+        <h2>Partner Sharing</h2>
+        <p>Each pair will briefly share one key observation from their investigation. Focus on:</p>
+        <ul>
+            <li>What you discovered about rates of change</li>
+            <li>Which scenario was most interesting or surprising</li>
+            <li>Connections you made between the three situations</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <h2>What You Just Discovered</h2>
+            <p>Congratulations! You've just explored the fundamental concept behind <strong>derivatives</strong>:</p>
+            
+            <h3>🚗 Speed is the derivative of position</h3>
+            <p>The car's changing speed told you how position was changing at each moment.</p>
+            
+            <h3>🦠 Growth rate is the derivative of population</h3>
+            <p>The bacteria's growth rate told you how quickly the population was changing.</p>
+            
+            <h3>💰 Marginal profit is the derivative of profit</h3>
+            <p>The rate of profit change told you whether selling one more item would increase or decrease profits.</p>
+        </div>
+        
+        <h2>The Big Idea</h2>
+        <div class="math-example">
+            <p><strong>A derivative measures how quickly one quantity changes with respect to another.</strong></p>
+            <p>In mathematical terms: If $y = f(x)$, then the derivative $f'(x)$ tells us the instantaneous rate of change of $y$ with respect to $x$.</p>
+        </div>
+        
+        <h2>Why This Matters</h2>
+        <p>Understanding derivatives allows us to:</p>
+        <ul>
+            <li><strong>Optimize:</strong> Find maximum profits, minimum costs, fastest routes</li>
+            <li><strong>Predict:</strong> Determine when populations will grow fastest or when objects will reach maximum height</li>
+            <li><strong>Control:</strong> Adjust systems to achieve desired rates of change</li>
+            <li><strong>Understand:</strong> Analyze how the world around us changes</li>
+        </ul>
+    </div>
+
+    <!-- Final Page: Tomorrow's Preview -->
+    <div class="page page-break">
+        <h1>Coming Up Tomorrow: Exploring Integrals</h1>
+        
+        <div class="highlight-box">
+            <h2>🔍 Tomorrow's Big Question</h2>
+            <p style="font-size: 20px; text-align: center; font-style: italic;">
+                "If derivatives tell us about rates of change,<br>
+                what do integrals tell us about?"
+            </p>
+        </div>
+        
+        <h2>Preview: The Flip Side of Calculus</h2>
+        <p>Today you discovered that derivatives help us understand <em>how fast</em> things change. Tomorrow, we'll explore integrals, which help us understand <em>how much</em> things accumulate over time.</p>
+        
+        <h3>🤔 Think About This Tonight:</h3>
+        <div class="investigation-box">
+            <p>Imagine you're driving a car and you know your speed at every moment during a trip. Could you figure out:</p>
+            <ul>
+                <li>How far you traveled in total?</li>
+                <li>How much gas you used?</li>
+                <li>The total time you spent accelerating?</li>
+            </ul>
+            <p><em>Hint: This is exactly what integrals help us calculate!</em></p>
+        </div>
+        
+        <h2>What to Expect</h2>
+        <ul>
+            <li><strong>Hands-on activity:</strong> Estimating areas under curves</li>
+            <li><strong>Real-world connections:</strong> Distance, area, volume, and more</li>
+            <li><strong>The Fundamental Theorem:</strong> How derivatives and integrals are connected</li>
+        </ul>
+        
+        <div class="math-example">
+            <h3>Sneak Peek: The Fundamental Theorem of Calculus</h3>
+            <p>Derivatives and integrals are actually <em>inverse operations</em>—they undo each other!</p>
+            <p>If $F'(x) = f(x)$, then $\int_a^b f(x) \, dx = F(b) - F(a)$</p>
+            <p><em>Don't worry about the details yet—we'll build up to this amazing connection!</em></p>
+        </div>
+        
+        <h2>Tonight's Reflection</h2>
+        <p>No formal homework, but think about these questions:</p>
+        <ol>
+            <li>Where in your daily life do you notice things accumulating over time?</li>
+            <li>How might knowing total accumulation be useful in the scenarios we explored today?</li>
+            <li>What questions do you have about calculus after today's introduction?</li>
+        </ol>
+        
+        <div style="text-align: center; margin-top: 40px; font-size: 18px; color: #2c3e50;">
+            <strong>Welcome to AP Calculus AB!<br>
+            Tomorrow, the adventure continues...</strong>
+        </div>
+    </div>
+</body>
+</html>
