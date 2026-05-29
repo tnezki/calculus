@@ -1,1 +1,1 @@
-Phase 2 draft complete: 16 HTML formative assessments, each with six versions, plus index and figures folder. Not zipped yet.
+Unit 1 formative assessments regenerated. Graph descriptions replaced by PNG graph assets in figures/. Placeholder coordinate plane included so figures folder is retained.
